@@ -26,6 +26,7 @@ class MovieDetails extends Component {
         show.image === null
           ? "http://i66.tinypic.com/hunnlw.jpg"
           : show.image.medium;
+      //  console.log(this.props);
       return (
         <React.Fragment>
           <Link to="/" className="btn btn-dark btn-sm mb-4">
