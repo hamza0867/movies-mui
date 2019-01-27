@@ -19,7 +19,7 @@ class Movies extends Component {
           } else {
             return (
               <React.Fragment>
-                <h3 className="text-center mb-4">{heading}</h3>
+                <h3 className="text-center mb-4 font-weight-bold">{heading}</h3>
                 <div className="row">
                   {moviesList.map(movie => {
                     return <Movie key={movie.show.id} movie={movie} />;

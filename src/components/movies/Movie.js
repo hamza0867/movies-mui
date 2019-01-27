@@ -11,7 +11,6 @@ const Movie = props => {
     show.image === null
       ? "http://i66.tinypic.com/hunnlw.jpg"
       : show.image.medium;
-  console.log(show);
   return (
     <div className="col-md-6">
       <div className="card mb-4 shadow-sm">

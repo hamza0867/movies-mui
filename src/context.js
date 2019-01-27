@@ -2,14 +2,28 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 
-const Context = React.createContext();
+export const Context = React.createContext();
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "SEARCH_MOVIES":
+      return {
+        ...state,
+        moviesList: action.payload,
+        heading: "Search Results"
+      };
+    default:
+      return state;
+  }
+};
 
 export class Provider extends Component {
   constructor(props) {
     super(props);
     this.state = {
       moviesList: [],
-      heading: "Search for a show inside the search box"
+      heading: "Search for a show inside the search box",
+      dispatch: action => this.setState(state => reducer(state, action))
     };
   }
 
